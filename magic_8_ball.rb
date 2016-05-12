@@ -1,8 +1,10 @@
 # push user responses into array
-
-@response = [ 'It is certain.', 'It is decidedly so.', 'Without a doubt.', 'You should count on it.', 'Absolutely, definitively, yes.' ]
+def array
+	@response = [ 'It is certain.', 'It is decidedly so.', 'Without a doubt.', 'You should count on it.', 'Absolutely, definitively, yes.' ]
+end
 
 def menu
+	puts "Welcome to the Magic 8 Ball."
 	puts "Type a question to get an answer, or type quit to end the program."
 	ask
 end
@@ -27,12 +29,16 @@ def question(user_input)
 		puts "#{user_response} was successfully added, thanks."
 	elsif user_input == "print answers"
 		puts "All responses are: #{@response}"
+	elsif user_input == "reset answers"
+		array
+		puts "The answers have been reset."
 	else
 		puts "I'm sorry, please ask me a question, or type quit to end the program."
 		ask
 	end
 end
 
+array
 while true
 	menu
 end
