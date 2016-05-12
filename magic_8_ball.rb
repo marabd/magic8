@@ -36,8 +36,3 @@ end
 while true
 	menu
 end
-
-
-	# else puts "Magic Eight Ball says:"
-	# 	response = [ 'It is certain.', 'It is decidedly so.', 'Without a doubt.', 'You should count on it.', 'Absolutely, definitively, yes.' ]
-	# 	puts response.sample
